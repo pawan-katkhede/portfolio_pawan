@@ -6,7 +6,10 @@
     <title>Pawan Katkhede</title>
     
     <!-- ✅ Poppins font import -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- ✅ CSS file -->
     <link rel="stylesheet" href="style.css">
@@ -17,281 +20,275 @@
      <div class="container">
        <nav>
           <img src="logo2withoutbg copy.png" class="logo">
-          <ul>
+          <ul id="sidemenu">
               <li><a href="#header">Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#resume">Resume</a></li>
               <li><a href="#contact">Contact</a></li>
+              <i class="fas fa-times" onclick="closemenu()"></i>
           </ul>
+          <i class="fas fa-bars" onclick="openmenu()"></i>
        </nav>
 
        <div class="header-text">
-          <h1 class="my-name">Hi , I am Pawan Katkhede</h1> <br>
+          <h1 class="my-name">Hi, I'm Pawan Katkhede</h1><br>
           <span id="typed-text"></span><span class="cursor">|</span><br>
           <div class="location-text location-gradient">From Hyderabad</div>
+          <img src="pawanremovebg.png" class="mobile-header-img">
        </div>
      </div>
    </div>
 
    <!-- About Me Section -->
-<!-- About Me Section -->
-<div id="about">
-  <div class="container">
-    <div class="row"> <!-- ✅ You missed this wrapper -->
-      <div class="about-col-1">
-        <img src="passport_pawan_yellow.png" alt="Pawan Image">
-      </div>
-      <div class="about-col-2">
-        <h1 class = sub-title>About Me</h1>
-        <p>
-  My name is <strong>Pawan Katkhede</strong>. I am a B.Tech Information Technology student with a strong passion for full-stack web development. I enjoy creating modern, user-friendly websites and connecting them with powerful backend systems and databases.
-</p>
+   <div id="about">
+     <div class="container">
+       <div class="row">
+         <div class="about-col-1">
+           <img src="passport_pawan_yellow.png" alt="Pawan Image">
+         </div>
+         <div class="about-col-2">
+           <h1 class="sub-title">About Me</h1>
+           <p>
+             My name is <strong>Pawan Katkhede</strong>. I am a B.Tech Information Technology student with a strong passion for full-stack web development. I enjoy creating modern, user-friendly websites and connecting them with powerful backend systems and databases.
+           </p>
 
-<div class="tab-titles">
+           <div class="tab-titles">
+             <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+             <p class="tab-links" onclick="opentab('experience')">Experience</p>
+             <p class="tab-links" onclick="opentab('education')">Education</p>
+           </div>
 
+           <div class="tab-contents active-tab" id="skills">
+             <ul>
+               <li><span>Frontend Development</span><br>Built responsive UIs using HTML, CSS, JavaScript, Bootstrap & React</li>
+               <li><span>Backend Engineering</span><br>Created RESTful APIs with Java, Spring Boot & JDBC</li>
+               <li><span>Database Integration</span><br>Worked with MySQL & Oracle to handle dynamic and secure data</li>
+               <li><span>Version Control</span><br>Used Git & GitHub for efficient code collaboration and project tracking</li>
+               <li><span>Full-Stack Projects</span><br>Designed, developed & deployed complete web applications using Java stack</li>
+               <li><span>Development Tools</span><br>Experienced in IntelliJ, Eclipse, VS Code, and Postman</li>
+               <li><span>Soft Skills</span><br>Effective communicator, problem-solver, and a collaborative team player</li>
+               <li><span>Agile Methodology</span><br>Built projects in iterative sprints with regular feedback and teamwork</li>
+             </ul>
+           </div>
 
-   <p class="tab-links active-link" onclick="opentab(event, 'skills')">Skills</p>
-<p class="tab-links" onclick="opentab(event, 'experience')">Experience</p>
-<p class="tab-links" onclick="opentab(event, 'education')">Education</p>
+           <div class="tab-contents" id="experience">
+             <ul>
+               <li>
+                 <span>Software Development Intern – Humming Bites Pvt. Ltd., Nashik, Maharastra</span><br>
+                 Working since June 2025<br>
+                 Built responsive UIs using HTML, CSS, JavaScript, Bootstrap & React
+               </li>
+               <li>
+                 <span>Android Development Intern – Mountreach Solutions Pvt. Ltd., Amravati, Maharastra</span><br>
+                 April 2021 – June 2021<br>
+                 Learned Android fundamentals and created mobile app prototypes during academic training
+               </li>
+             </ul>
+           </div>
+           <div class="tab-contents" id="education">
+             <ul>
+               <li>
+                 <span>Bachelor of Technology in Information Technology</span><br>
+                 2022 – 2025<br>
+                 Prof. Ram Meghe Institute of Technology and Research, Amravati<br>
+                 CGPA: 8.17<br>
+                 Studied core IT subjects and developed full-stack Java web applications.
+               </li>
+               <li>
+                 <span>Diploma in Computer Engineering</span><br>
+                 2019 – 2022<br>
+                 Government Polytechnic, Murtizapur<br>
+                 Percentage: 85%<br>
+                 Gained strong foundation in programming, databases, and software development.
+               </li>
+               <li>
+                 <span>Secondary School (10th)</span><br>
+                 2018 – 2019<br>
+                 Lions Dnyanpeeth, Khamgaon<br>
+                 Percentage: 82%<br>
+                 Focused on Mathematics and Science, built academic base for technical studies.
+               </li>
+             </ul>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
 
+   <!-- Resume Section -->
+   <div id="resume">
+     <div class="container">
+       <h1 class="sub-title">My Resume</h1>
 
-</div>
+       <div class="resume-section">
+         <h2>Career Objective</h2>
+         <p>Recent IT graduate and aspiring Java Developer passionate about solving real-world problems using technology. Seeking an entry-level opportunity to contribute and grow in a dynamic company.</p>
+       </div>
 
+       <div class="resume-section">
+         <h2>Education</h2>
+         <ul>
+           <li><strong>BE in Information Technology</strong><br>Prof. Ram Meghe Institute, 2022–2025 – CGPA: 8.17</li>
+           <li><strong>Diploma in Computer Engineering</strong><br>Govt. Polytechnic Murtizapur, 2019–2022 – 84.80%</li>
+         </ul>
+       </div>
 
-<div class="tab-contents active-tab" id="skills">
-   <ul >
-  <li><span>Frontend Development</span><br>Built responsive UIs using HTML, CSS, JavaScript, Bootstrap & React</li>
-  <li><span>Backend Engineering</span><br>Created RESTful APIs with Java, Spring Boot & JDBC</li>
-  <li><span>Database Integration</span><br>Worked with MySQL & Oracle to handle dynamic and secure data</li>
-  <li><span>Version Control</span><br>Used Git & GitHub for efficient code collaboration and project tracking</li>
-  <li><span>Full-Stack Projects</span><br>Designed, developed & deployed complete web applications using Java stack</li>
-  <li><span>Development Tools</span><br>Experienced in IntelliJ, Eclipse, VS Code, and Postman</li>
-  <li><span>Soft Skills</span><br>Effective communicator, problem-solver, and a collaborative team player</li>
-  <li><span>Agile Methodology</span><br>Built projects in iterative sprints with regular feedback and teamwork</li>
-</ul>
-</div>
+       <div class="resume-section">
+         <h2>Skills</h2>
+         <p><strong>Technical:</strong> Java, Spring Boot, Hibernate, HTML5, CSS3, JavaScript, Oracle, SQL, React, Git, Maven, REST API, Eclipse, Postman, JSP, JDBC</p>
+         <p><strong>Soft:</strong> Adaptability, Time Management, Public Speaking, Fast Learner, Problem Solving, Teamwork, Critical Thinking</p>
+       </div>
 
+       <div class="resume-section">
+         <h2>Experience</h2>
+         <p><strong>Web Development Intern</strong><br>Humming Bytes Pvt. Ltd., Nashik – June 2025–Present</p>
+         <ul>
+           <li>Built responsive web pages with HTML, CSS, JS, and React</li>
+           <li>Handled REST API integration and SEO optimization</li>
+         </ul>
+       </div>
 
-<div class="tab-contents" id="experience">
-  <ul>
-    <li>
-      <span>Software Development Intern – Humming Bites Pvt. Ltd., Nashik ,Maharastra</span><br>
-      Working since June 2025<br>
-      Built responsive UIs using HTML, CSS, JavaScript, Bootstrap & React
-    </li>
-    <li>
-      <span>Android Development Intern – Mountreach Solutions Pvt. Ltd., Amravati ,Maharastra</span><br>
-      April 2021 – June 2021<br>
-      Learned Android fundamentals and created mobile app prototypes during academic training
-    </li>
-  </ul>
-</div>
-<div class="tab-contents" id="education">
-  <ul>
-    <li>
-      <span>Bachelor of Technology in Information Technology</span><br>
-      2022 – 2025<br>
-      Prof. Ram Meghe Institute of Technology and Research, Amravati<br>
-      CGPA: 8.17<br>
-      Studied core IT subjects and developed full-stack Java web applications.
-    </li>
-    <li>
-      <span>Diploma in Computer Engineering</span><br>
-      2019 – 2022<br>
-      Government Polytechnic, Murtizapur<br>
-      Percentage: 85%<br>
-      Gained strong foundation in programming, databases, and software development.
-    </li>
-    <li>
-      <span>Secondary School (10th)</span><br>
-      2018 – 2019<br>
-      Lions Dnyanpeeth, Khamgaon<br>
-      Percentage: 82%<br>
-      Focused on Mathematics and Science, built academic base for technical studies.
-    </li>
-  </ul>
-</div>
+       <div class="resume-section">
+         <h2>Projects</h2>
+         <ul>
+           <li><strong>Garbage Monitoring System:</strong> Smart dustbin with sensors, NodeMCU, smoke detection, and auto-lid</li>
+           <li><strong>Portfolio Website:</strong> Personal web portfolio built with HTML/CSS</li>
+         </ul>
+       </div>
 
-      </div>
-    </div>
-  </div>
-</div>
+       <div class="resume-section">
+         <h2>Achievements</h2>
+         <ul>
+           <li>Earned Core Java Certificate from Infosys Springboard</li>
+         </ul>
+       </div>
 
+       <div class="resume-section">
+         <h2>Hobbies</h2>
+         <ul>
+           <li>Exploring new technologies and coding</li>
+           <li>Bike riding</li>
+           <li>Reading current affairs</li>
+         </ul>
+       </div>
 
+       <div class="resume-section">
+         <h2>Download</h2>
+         <a href="Jully 2025 RESUME.pdf" download class="btn">📄 Download Resume</a>
+       </div>
+     </div>
+   </div>
 
-<!-- REsume Section -->
+   <!-- Contact section -->
+   <div id="contact">
+     <div class="container">
+       <h1 class="sub-title">Contact Me</h1>
+       <div class="contact-cards">
 
-<div id="resume">
-  <div class="container">
-    <h1 class="sub-title">My Resume</h1>
+         <!-- Gmail -->
+         <div class="contact-card">
+           <i class="fas fa-envelope"></i>
+           <p>Email: katkhedepawanclg@gmail.com</p>
+         </div>
 
-    <div class="resume-section">
-      <h2>Career Objective</h2>
-      <p>Recent IT graduate and aspiring Java Developer passionate about solving real-world problems using technology. Seeking an entry-level opportunity to contribute and grow in a dynamic company.</p>
-    </div>
+         <!-- Phone -->
+         <div class="contact-card">
+           <i class="fas fa-phone"></i>
+           <p>Mobile: 7620988987</p>
+         </div>
 
-    <div class="resume-section">
-      <h2>Education</h2>
-      <ul>
-        <li><strong>BE in Information Technology</strong><br>Prof. Ram Meghe Institute, 2022–2025 – CGPA: 8.17</li>
-        <li><strong>Diploma in Computer Engineering</strong><br>Govt. Polytechnic Murtizapur, 2019–2022 – 84.80%</li>
-      </ul>
-    </div>
+         <!-- GitHub -->
+         <div class="contact-card">
+           <i class="fab fa-github"></i>
+           <a href="https://github.com/pawan-katkhede" target="_blank" class="btn">Visit GitHub</a>
+         </div>
 
-    <div class="resume-section">
-      <h2>Skills</h2>
-      <p><strong>Technical:</strong> Java, Spring Boot, Hibernate, HTML5, CSS3, JavaScript, Oracle, SQL, React, Git, Maven, REST API, Eclipse, Postman, JSP, JDBC</p>
-      <p><strong>Soft:</strong> Adaptability, Time Management, Public Speaking, Fast Learner, Problem Solving, Teamwork, Critical Thinking</p>
-    </div>
+         <!-- LinkedIn -->
+         <div class="contact-card">
+           <i class="fab fa-linkedin"></i>
+           <a href="https://www.linkedin.com/in/pawan-katkhede-5245a221b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="btn">Visit LinkedIn</a>
+         </div>
 
-    <div class="resume-section">
-      <h2>Experience</h2>
-      <p><strong>Web Development Intern</strong><br>Humming Bytes Pvt. Ltd., Nashik – June 2025–Present</p>
-      <ul>
-        <li>Built responsive web pages with HTML, CSS, JS, and React</li>
-        <li>Handled REST API integration and SEO optimization</li>
-      </ul>
-    </div>
+         <!-- Instagram -->
+         <div class="contact-card">
+           <i class="fab fa-instagram"></i>
+           <a href="https://www.instagram.com/pawan__katkhede?igsh=MW0zYzR2eHl3d2pqMg==" target="_blank" class="btn">Visit Instagram</a>
+         </div>
 
-    <div class="resume-section">
-      <h2>Projects</h2>
-      <ul>
-        <li><strong>Garbage Monitoring System :</strong> Smart dustbin with sensors, NodeMCU, smoke detection, and auto-lid</li>
-        <li><strong>Portfolio Website:</strong> Personal web portfolio built with HTML/CSS</li>
-      </ul>
-    </div>
+       </div>
+     </div>
+   </div>
 
-    <div class="resume-section">
-      <h2>Achievements</h2>
-      <ul>
-        <li>Earned Core Java Certificate from Infosys Springboard</li>
-      </ul>
-    </div>
+   <!-- Footer -->
+   <div class="copyright">
+     <p>© 2025 Pawan Katkhede. All rights reserved.</p>
+   </div>
 
-    <div class="resume-section">
-      <h2>Hobbies</h2>
-      <ul>
-        <li>Exploring new technologies and coding</li>
-        <li>Bike riding</li>
-        <li>Reading current affairs</li>
-      </ul>
-    </div>
-
-    <div class="resume-section">
-      <h2>Download</h2>
-      <a href="Jully 2025  RESUME.pdf" download class="btn">📄 Download Resume</a>
-    </div>
-  </div>
-</div>
-
-
-
-
-<!-- Contact section -->
-<div id="contact">
-  <div class="container">
-    <h1 class="sub-title">Contact Me</h1>
-    <div class="contact-cards">
-
-      <!-- Gmail -->
-      <div class="contact-card">
-        <img src="gmaillogo.jpg" alt="Gmail Icon">
-        <p>Email: katkhedepawanclg@gmail.com</p>
-      </div>
-
-      <!-- Phone -->
-      <div class="contact-card">
-        <img src="phonelogo.jpg" alt="Phone Icon">
-        <p>Mobile: 7620988987</p>
-      </div>
-
-      <!-- GitHub -->
-      <div class="contact-card">
-        <img src="githublogo.png" alt="GitHub Icon">
-        <a href="https://github.com/pawan-katkhede" target="_blank" class="btn">Visit GitHub</a>
-      </div>
-
-      <!-- LinkedIn -->
-      <div class="contact-card">
-        <img src="linkedinlogo.jfif" alt="LinkedIn Icon">
-        <a href="https://www.linkedin.com/in/pawan-katkhede-5245a221b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="btn">Visit LinkedIn</a>
-      </div>
-
-      <!-- Instagram -->
-      <div class="contact-card">
-        <img src="instalogo.png" alt="Instagram Icon">
-        <a href="https://www.instagram.com/pawan__katkhede?igsh=MW0zYzR2eHl3d2pqMg==" target="_blank" class="btn">Visit Instagram</a>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-
-   <!--  Typing Animation Script -->
+   <!-- Scripts -->
    <script>
-   const roles = ["Java Developer", "IT Student", "Software Developer"];
-   let index = 0;
-   let charIndex = 0;
-   let isDeleting = false;
-   const typedText = document.getElementById("typed-text");
+     // Typing Animation
+     const roles = ["Java Developer", "IT Student", "Software Developer"];
+     let index = 0;
+     let charIndex = 0;
+     let isDeleting = false;
+     const typedText = document.getElementById("typed-text");
 
-   function typeEffect() {
-     const currentRole = roles[index];
-     
-     if (isDeleting) {
-       charIndex--;
-       typedText.textContent = currentRole.substring(0, charIndex);
-     } else {
-       charIndex++;
-       typedText.textContent = currentRole.substring(0, charIndex);
+     function typeEffect() {
+       const currentRole = roles[index];
+       
+       if (isDeleting) {
+         charIndex--;
+         typedText.textContent = currentRole.substring(0, charIndex);
+       } else {
+         charIndex++;
+         typedText.textContent = currentRole.substring(0, charIndex);
+       }
+
+       if (!isDeleting && charIndex === currentRole.length) {
+         setTimeout(() => {
+           isDeleting = true;
+           typeEffect();
+         }, 1000);
+         return;
+       }
+
+       if (isDeleting && charIndex === 0) {
+         isDeleting = false;
+         index = (index + 1) % roles.length;
+       }
+
+       setTimeout(typeEffect, isDeleting ? 50 : 150);
      }
 
-     if (!isDeleting && charIndex === currentRole.length) {
-       setTimeout(() => {
-         isDeleting = true;
-         typeEffect();
-       }, 1000);
-       return;
+     typeEffect();
+
+     // Tab functionality
+     function opentab(tabname) {
+       const tablinks = document.getElementsByClassName("tab-links");
+       const tabcontents = document.getElementsByClassName("tab-contents");
+
+       for (let tablink of tablinks) {
+         tablink.classList.remove("active-link");
+       }
+
+       for (let tabcontent of tabcontents) {
+         tabcontent.classList.remove("active-tab");
+       }
+
+       event.currentTarget.classList.add("active-link");
+       document.getElementById(tabname).classList.add("active-tab");
      }
 
-     if (isDeleting && charIndex === 0) {
-       isDeleting = false;
-       index = (index + 1) % roles.length;
+     // Mobile menu functionality
+     var sidemenu = document.getElementById("sidemenu");
+
+     function openmenu() {
+       sidemenu.style.right = "0";
      }
 
-     setTimeout(typeEffect, isDeleting ? 50 : 150);
-   }
-
-   typeEffect();
+     function closemenu() {
+       sidemenu.style.right = "-200px";
+     }
    </script>
-
-
-
-
-
-
-<script>
-
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-
-
-
-   function opentab(event, tabname) {
-  for (let tablink of tablinks) {
-    tablink.classList.remove("active-link");
-  }
-
-  for (let tabcontent of tabcontents) {
-    tabcontent.classList.remove("active-tab");
-  }
-
-  event.currentTarget.classList.add("active-link");
-  document.getElementById(tabname).classList.add("active-tab");
-}
-
-</script>
-
 </body>
 </html>
