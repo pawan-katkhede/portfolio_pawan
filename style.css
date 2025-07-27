@@ -432,6 +432,7 @@ margin: 10px 0;
   80% { transform: translate(3px, 0); }
   100% { transform: translate(0, 0); }
 }
+
 @media (max-width: 600px) {
   .contact-cards {
     flex-direction: column;
@@ -440,5 +441,37 @@ margin: 10px 0;
 
   .contact-card {
     width: 90%;
+  }
+}
+@media (max-width: 768px) {
+  #header {
+  background-color: #080808;
+  height: auto;
+}
+
+  .header-text {
+    font-size: 28px;
+    margin-top: 60px;
+    text-align: left;
+  }
+
+  .location-text {
+    font-size: 18px;
+  }
+}
+.mobile-header-img {
+  display: none;
+  width: 200px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .mobile-header-img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  #header {
+    padding-bottom: 50px;
   }
 }
